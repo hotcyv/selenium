@@ -7,10 +7,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class _03_TesteAutomatizado {
-	private FirefoxDriver driver;
+	private ChromeDriver driver;
 
 	@Test
 	public void deveAdicionarUmUsuario() {
@@ -33,7 +34,8 @@ public class _03_TesteAutomatizado {
 
 	@Before
 	public void inicializa() {
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "/home/victor/Downloads/chromedriver");
+		driver = new ChromeDriver();
 	}
 
 	@Test

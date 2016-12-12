@@ -22,9 +22,9 @@ public class UsuariosSystemTest extends BaseTest {
 	public void deveAlterarUmUsuario() {
 		usuarios.visita();
 		usuarios.novo().cadastra("Usuario Teste", "usuario@teste.com");
-		usuarios.altera(1).para("José da Silva", "jose@silva.com");
+		usuarios.altera(1).para("Josï¿½ da Silva", "jose@silva.com");
 		assertFalse(usuarios.existeNaListagem("Usuario Teste", "usuario@teste.com"));
-		assertTrue(usuarios.existeNaListagem("José da Silva", "jose@silva.com"));
+		assertTrue(usuarios.existeNaListagem("Josï¿½ da Silva", "jose@silva.com"));
 	}
 
 	@Test
@@ -53,7 +53,10 @@ public class UsuariosSystemTest extends BaseTest {
 
 	@Test
 	public void naoDeveAdicionarUmUsuarioSemNomeOuEmail() {
-		// TODO
+//		usuarios.visita();
+//		NovoUsuarioPage form = usuarios.novo();
+//		form.cadastra("", "usuario@teste.com");
+//		assertTrue(form.validacaoDeNomeObrigatorio());
 	}
 
 }

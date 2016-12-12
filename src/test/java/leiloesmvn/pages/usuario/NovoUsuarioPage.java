@@ -22,5 +22,9 @@ public class NovoUsuarioPage {
 	public boolean validacaoDeNomeObrigatorio() {
 		return driver.getPageSource().contains("Nome obrigatorio!");
 	}
+	
+	public boolean validacaoDeEmailObrigatorio() {
+		return driver.getPageSource().contains("E-mail obrigatorio!");
+	}
 
 }

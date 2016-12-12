@@ -1,10 +1,11 @@
 package leiloesmvn;
 
 import org.junit.After;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseTest {
-	protected FirefoxDriver driver;
+	protected ChromeDriver driver;
 
 	@After
 	public void encerra() {
@@ -12,7 +13,7 @@ public class BaseTest {
 	}
 
 	public void inicializa() {
-		this.driver = new FirefoxDriver();
-		driver.get("http://localhost:8080/leiloesmvn/apenas-teste/limpa");
+		System.setProperty("webdriver.chrome.driver", "/home/victor/Downloads/chromedriver");
+		driver = new ChromeDriver();
 	}
 }
